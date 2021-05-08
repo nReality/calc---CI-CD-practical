@@ -1,5 +1,6 @@
 var plus;
 var minus;
+const testVariable = 'Test';
 
 function initialize() {
   plus = document.calc.operator.options[0];
@@ -15,3 +16,9 @@ function calculate() {
     document.calc.answer.value = a - b;
   }
 }
+
+function calc(a, b) {
+  console.log(`${a} ${b}`);
+  return 3;
+}
+module.exports = calc;
