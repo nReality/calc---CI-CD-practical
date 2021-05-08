@@ -5,10 +5,11 @@
 
     <script language=javascript type="text/javascript">
 
-        var plus;
+        var plus, minus;
 
         function initialize() {
             plus = document.calc.operator.options[0];
+            minus = document.calc.operator.options[1];
         }
 
         function calculate() {
@@ -16,6 +17,9 @@
             b = parseInt(document.calc.val2.value);
             if (plus.selected) {
                 document.calc.answer.value = a + b;
+            }
+            if (minus.selected) {
+                document.calc.answer.value = a - b;
             }
         }
     </script>
@@ -32,6 +36,7 @@
 
         <select name=operator>
             <option value=plus>+
+            <option value=minus>-
         </select>
 
         <input type=text name=val2 size=10>
