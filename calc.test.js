@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 const calc = require('./calc.js');
 
-test('my first tests', () => {
-  expect(calc(1, 2)).toBe(3);
+test('calc should add two numbers given plus operator', () => {
+  const result = calc(1, 2, '+');
+  expect(result).toBe(3);
 });
