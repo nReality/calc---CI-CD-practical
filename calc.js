@@ -17,7 +17,7 @@ function calculate() {
 }
 
 function calc(a, b, operator) {
-  if (operator === 'x') {
+  if (operator === '+') {
     return a + b;
   }
   return NaN;
