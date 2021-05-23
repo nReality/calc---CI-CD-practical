@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+const { Assertion } = require('chai');
 const calc = require('./calc.js');
 
 // adding two numbers should give the sum
@@ -20,6 +21,8 @@ test('subtracting two numbers should give the difference', () => {
   // given
   const firstNumber = 5;
   const secondNumber = 3;
+  set up database 
+  //nockjs: set up external services
 
   // when
   const result = calc(firstNumber, secondNumber, '-');
