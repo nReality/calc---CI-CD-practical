@@ -13,18 +13,34 @@ function calc(a, b, operator) {
   if (operator === '-') {
     return a - b;
   }
+  if (operator === '*') {
+    return a * b;
+  }
   return NaN;
 }
 
 function calculate() {
+  // integration
   const a = parseInt(document.calc.val1.value, 10);
   const b = parseInt(document.calc.val2.value, 10);
+
+  let operator = '';
   if (plus.selected) {
-    document.calc.answer.value = calc(a, b, '+');
+    operator = '+';
   }
   if (minus.selected) {
-    document.calc.answer.value = calc(a, b, '-');
+    operator = '-';
   }
+
+  // logic
+  const result = calc(a, b, operator);
+
+  // integration
+  document.calc.answer.value = result;
 }
 
-module.exports = calc;
+try {
+  module.exports = calc;
+} catch (err) {
+  console.log(err);
+}

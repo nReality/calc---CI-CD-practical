@@ -16,7 +16,7 @@ test('adding two numbers should give the sum', () => {
   expect(result).toBe(3);
 });
 
-test('subtracting two number should give the difference', () => {
+test('subtracting two numbers should give the difference', () => {
   // given
   const firstNumber = 5;
   const secondNumber = 3;
@@ -26,4 +26,16 @@ test('subtracting two number should give the difference', () => {
 
   // then
   expect(result).toBe(2);
+});
+
+test('multiply two numbers should give the product', () => {
+  // given
+  const firstNumber = 5;
+  const secondNumber = 3;
+
+  // when
+  const result = calc(firstNumber, secondNumber, '*');
+
+  // then
+  expect(result).toBe(15);
 });
